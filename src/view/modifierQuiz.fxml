@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.cell.*?>
+
+<?import javafx.collections.*?>
+<?import tableView.*?>
+
+<AnchorPane prefHeight="573.0" prefWidth="600.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../theme/DarkTheme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ModifierQuiz">
+   <children>
+      <TableView fx:id="table_notion" layoutX="75.0" layoutY="182.0" prefHeight="268.0" prefWidth="459.0">
+         <columns>
+            <TableColumn fx:id="table_notion_titre" prefWidth="137.0" text="Titre" >
+               <cellValueFactory><PropertyValueFactory property="nom" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="table_notion_desc" prefWidth="147.0" text="Description" >
+               <cellValueFactory><PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="table_notion_nQ" prefWidth="170.0" text="nb Question" >
+               <cellValueFactory><PropertyValueFactory property="nbQuestion" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btn_modifier" layoutX="253.0" layoutY="535.0" onAction="#modifierClicked" text="Done" />
+      <JFXTextField fx:id="txt_nom" labelFloat="true" layoutX="75.0" layoutY="38.0" prefHeight="47.0" prefWidth="459.0" promptText="Nom" />
+      <JFXDatePicker fx:id="date_debut" defaultColor="#f8f8f8" layoutX="75.0" layoutY="114.0" promptText="Date debut" />
+      <JFXDatePicker fx:id="date_fin" defaultColor="WHITE" layoutX="305.0" layoutY="114.0" promptText="Date fin" />
+      <JFXButton fx:id="btn_ajouter_notion" layoutX="81.0" layoutY="450.0" onAction="#ajouterNotion" text="Ajouter" />
+      <JFXButton fx:id="btn_supprimer_notion" layoutX="418.0" layoutY="450.0" onAction="#supprimerNotion" text="Supprimer" />
+      <JFXButton fx:id="btn_Notion" layoutX="259.0" layoutY="450.0" onAction="#modifierNotion" text="Modifier" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="356.0" prefWidth="549.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../theme/DarkTheme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AjouteApprenant">
+   <children>
+      <JFXTextField fx:id="txt_nom" focusColor="WHITE" labelFloat="true" layoutX="61.0" layoutY="29.0" prefHeight="37.0" prefWidth="428.0" promptText="Nom" />
+      <JFXTextField fx:id="txt_prenom" focusColor="WHITE" labelFloat="true" layoutX="61.0" layoutY="83.0" prefHeight="37.0" prefWidth="428.0" promptText="Prenom" />
+      <JFXDatePicker fx:id="date_naissance" defaultColor="WHITE" layoutX="61.0" layoutY="147.0" prefHeight="37.0" prefWidth="428.0" promptText="Date de Naissance" />
+      <JFXTextField fx:id="txt_adresse" focusColor="#f2f2f2" labelFloat="true" layoutX="61.0" layoutY="201.0" prefHeight="37.0" prefWidth="428.0" promptText="Adresse" />
+      <JFXButton fx:id="btn_ajouter" layoutX="248.0" layoutY="286.0" onMouseClicked="#ajouterClicked" text="ajouter" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import tableView.*?>
+
+<AnchorPane prefHeight="672.0" prefWidth="696.0" style="-fx-background-color: #1D1D1D;" stylesheets="@../theme/DarkTheme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ModifierNotion">
+   <children>
+      <JFXTextField fx:id="txt_titre" focusColor="WHITE" labelFloat="true" layoutX="74.0" layoutY="52.0" prefHeight="41.0" prefWidth="534.0" promptText="Titre" />
+      <JFXTextArea fx:id="txt_description" focusColor="WHITE" labelFloat="true" layoutX="74.0" layoutY="123.0" prefHeight="58.0" prefWidth="534.0" promptText="Description" />
+      <JFXTextField fx:id="txt_nbQuestion" focusColor="WHITE" labelFloat="true" layoutX="74.0" layoutY="225.0" prefHeight="37.0" prefWidth="534.0" promptText="Nombre Question" />
+      <TableView fx:id="table_quuestion" layoutX="74.0" layoutY="290.0" prefHeight="261.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="table_qt_enonnce" prefWidth="396.0" text="Enonnce" >
+              <cellValueFactory><PropertyValueFactory property="ennonce" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="table_qt_type" prefWidth="133.0" text="Type" >
+                <cellValueFactory><PropertyValueFactory property="type" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_ajouter" layoutX="74.0" layoutY="553.0" onAction="#ajouterQuestion" text="Ajouter" />
+      <JFXButton fx:id="btn_supprimer" layoutX="492.0" layoutY="553.0" onAction="#supprimerQuestion" text="Supprimer" />
+      <JFXButton fx:id="btn_done" layoutX="303.0" layoutY="633.0" onAction="#doneClicked" text="Done" />
+   </children>
+</AnchorPane>

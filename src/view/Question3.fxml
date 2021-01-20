@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="548.0" prefWidth="600.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../theme/DarkTheme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.Question3">
+   <children>
+      <JFXRadioButton fx:id="radio_QCM" layoutX="133.0" layoutY="155.0" onMouseClicked="#radio_QCM_checked" text="QCM" />
+      <JFXRadioButton fx:id="radio_QCU" layoutX="273.0" layoutY="154.0" onMouseClicked="#radio_QCU_checked" text="QCU" />
+      <JFXRadioButton fx:id="radio_QO" layoutX="404.0" layoutY="153.0" onMouseClicked="#radio_QO_checked" text="QO" />
+      <Pane fx:id="pane_question" layoutX="47.0" layoutY="183.0" prefHeight="296.0" prefWidth="457.0">
+         <children>
+            <Pane fx:id="pane_QCM" layoutX="-1.0" layoutY="1.0" prefHeight="296.0" prefWidth="457.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="34.0" text="enonce" />
+                  <JFXTextArea fx:id="enonce_QCM" layoutX="68.0" layoutY="26.0" prefHeight="66.0" prefWidth="371.0" />
+                  <TextField fx:id="p1" layoutX="62.0" layoutY="122.0" prefHeight="26.0" prefWidth="204.0" />
+                  <TextField fx:id="p3" layoutX="61.0" layoutY="210.0" prefHeight="26.0" prefWidth="210.0" />
+                  <TextField fx:id="p2" layoutX="62.0" layoutY="165.0" prefHeight="26.0" prefWidth="204.0" />
+                  <JFXCheckBox fx:id="s1" layoutX="281.0" layoutY="126.0" onMouseClicked="#p1_checked" text=" " />
+                  <JFXCheckBox fx:id="s2" layoutX="283.0" layoutY="169.0" onMouseClicked="#p2_checked" text=" " />
+                  <JFXCheckBox fx:id="s3" layoutX="283.0" layoutY="214.0" onMouseClicked="#p3_checked" text=" " />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_QO" layoutX="-4.0" prefHeight="296.0" prefWidth="465.0" visible="false">
+               <children>
+                  <JFXTextArea fx:id="enonce_QO" layoutX="102.0" layoutY="21.0" prefHeight="75.0" prefWidth="346.0" />
+                  <Label layoutX="33.0" layoutY="53.0" text="enonce" />
+                  <JFXTextField fx:id="solutio_QO" layoutX="105.0" layoutY="142.0" prefHeight="26.0" prefWidth="179.0" />
+                  <Label layoutX="39.0" layoutY="154.0" text="solution" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="ajouterButton" layoutX="228.0" layoutY="501.0" onMouseClicked="#ajouter" text="Ajouter" />
+      <Label layoutX="214.0" layoutY="15.0" prefHeight="37.0" prefWidth="155.0" text="nom de la notion" />
+      <Label fx:id="label_formation" layoutX="234.0" layoutY="20.0" prefHeight="27.0" prefWidth="179.0" />
+      <Label fx:id="label_quiz" layoutX="161.0" layoutY="50.0" prefHeight="16.0" prefWidth="155.0" />
+      <Label fx:id="label_notion" layoutX="160.0" layoutY="76.0" prefHeight="16.0" prefWidth="155.0" />
+   </children>
+</AnchorPane>

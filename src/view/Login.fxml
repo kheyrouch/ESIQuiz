@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="315.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../theme/DarkTheme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.Login">
+   <children>
+      <JFXButton fx:id="btn_logIn" layoutX="86.0" layoutY="348.0" onMouseClicked="#logInClicked" prefHeight="32.0" prefWidth="157.0" stylesheets="@../theme/DarkTheme.css" text="log in" />
+      <JFXTextField fx:id="txt_userName" focusColor="WHITE" labelFloat="true" layoutX="24.0" layoutY="165.0" prefHeight="35.0" prefWidth="278.0" promptText="username" />
+      <JFXPasswordField fx:id="txt_passwoed" focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="237.0" prefHeight="35.0" prefWidth="278.0" promptText="password" />
+      <Label layoutX="123.0" layoutY="41.0" text="EsiQuiz" />
+   </children>
+</AnchorPane>
